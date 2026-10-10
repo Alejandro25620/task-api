@@ -4,7 +4,7 @@ const tareaSchema = new mongoose.Schema(
     {
         titulo: {
             type: String,
-            require: [true, "Titulo obligatorio"],
+            required: [true, "Titulo obligatorio"],
             trim: true,
         },
         descripcion: {
@@ -18,4 +18,6 @@ const tareaSchema = new mongoose.Schema(
         },
     },
     { timestamps: true }
-)
+);
+
+export default mongoose.model("Tarea", tareaSchema);
